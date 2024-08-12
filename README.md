@@ -5,7 +5,7 @@
 ## Local
 * Install Requirements
     > ```
-    > git clone
+    > git clone https://github.com/suffolk066/yolov8-infer
     > cd yolov8-infer
     > bash local_install.sh
     > ```
@@ -28,7 +28,7 @@
 ## DOCKER
 * Create Docker Image
     > ```
-    > git clone
+    > git clone https://github.com/suffolk066/yolov8-infer
     > cd yolov8-infer
     > docker build -f src/Dockerfile -t yolov8-infer .
     > ```
