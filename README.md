@@ -6,28 +6,28 @@
 * Install Requirements
     > ```
     > git clone https://github.com/suffolk066/yolov8-infer
-    > cd yolov8-infer
+    > cd yolov8-infer/
     > bash local_install.sh
     > ```
-* Get Model - For example, to download YOLOv8-S:
+* Get Model
     > ```
-    > cd models
+    > cd models/
     > yolo export model=yolov8s.pt format=engine half=True
     > ```
-* Place the model file into the ./models folder.
 * Set your MODEL_PATH in the src/app.py file:
     > ```
-    > MODEL_PATH = 'Put your model path'
+    > MODEL_PATH = '../models/yolov8s.engine' # For example, to download YOLOv8-S:
     > ```
 * Run local server
     > ```
+    > cd ..
     > python3 src/app.py
     > ```
 ## DOCKER
 * Create Docker Image
     > ```
     > git clone https://github.com/suffolk066/yolov8-infer
-    > cd yolov8-infer
+    > cd yolov8-infer/
     > docker build -f src/Dockerfile -t yolov8-infer .
     > ```
 * Run docker container
@@ -39,9 +39,9 @@
     > --ipc=host --runtime=nvidia -p 5000:5000 \
     > -name yolov8-infer yolov8-infer
     > ```
-* Get Model - For example, to download YOLOv8-S:
+* Get Model
     > ```
-    > cd .. && cd models
+    > cd .. && cd models/
     > yolo export model=yolov8s.pt format=engine half=True
     > ```
 * Set your MODEL_PATH in the src/app.py file:
