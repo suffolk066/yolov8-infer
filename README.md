@@ -1,6 +1,7 @@
 # YOLOv8 Inference API with Docker
 ## Requirements
 * Jetson Orin Device(AGX Orin, Orin NX, Orin Nano) with Jetpack 6
+* (Option) `sudo usermod -aG docker $USER` # If you don't run this command, you need to change all `docker` commands to `sudo docker`
 # HOW TO RUN
 ## Local
 * Install Requirements
@@ -20,7 +21,7 @@
     > ```
 * Run local server
     > ```
-    > cd ..
+    > cd .. # run code from yolov8-infer/
     > python3 src/app.py
     > ```
 ## DOCKER
@@ -38,6 +39,10 @@
     > -v $(pwd)/src:/ultralytics/src \
     > --ipc=host --runtime=nvidia -p 5000:5000 \
     > -name yolov8-infer yolov8-infer
+    > ```
+* Connect docker container
+    > ```
+    > docker exec -it yolov8-infer /bin/bash
     > ```
 * Get Model
     > ```
