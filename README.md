@@ -11,15 +11,13 @@
     > ```
 * Get Model - For example, to download YOLOv8-S:
     > ```
-    > cd .. && cd models
+    > cd models
     > yolo export model=yolov8s.pt format=engine half=True
     > ```
 * Place the model file into the ./models folder.
-* Set your MODEL_PATH in the src/config.json file:
+* Set your MODEL_PATH in the src/app.py file:
     > ```
-    > {
-    >     "MODEL_PATH": "INSERT YOUR MODEL PATH"
-    > }
+    > MODEL_PATH = 'Put your model path'
     > ```
 * Run local server
     > ```
@@ -32,17 +30,6 @@
     > cd yolov8-infer
     > docker build -f src/Dockerfile -t yolov8-infer .
     > ```
-* Get Model - For example, to download YOLOv8-S:
-    > ```
-    > wget https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8s.pt
-    > ```
-* Place the model file into the ./models folder.
-* Set your MODEL_PATH in the src/config.json file:
-    > ```
-    > {
-    >     "MODEL_PATH": "INSERT YOUR MODEL PATH"
-    > }
-    > ```
 * Run docker container
     > ```
     > docker run -it -d \
@@ -51,6 +38,15 @@
     > -v $(pwd)/src:/ultralytics/src \
     > --ipc=host --runtime=nvidia -p 5000:5000 \
     > -name yolov8-infer yolov8-infer
+    > ```
+* Get Model - For example, to download YOLOv8-S:
+    > ```
+    > cd .. && cd models
+    > yolo export model=yolov8s.pt format=engine half=True
+    > ```
+* Set your MODEL_PATH in the src/app.py file:
+    > ```
+    > MODEL_PATH = '../models/yolov8s.engine' # For example, to download YOLOv8-S:
     > ```
 ## How to Test
 * Find an image of your choice.
