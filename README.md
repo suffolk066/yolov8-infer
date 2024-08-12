@@ -2,8 +2,8 @@
 ## Requirements
 * Jetson Orin Device(AGX Orin, Orin NX, Orin Nano) with Jetpack 6
 * (Option) `sudo usermod -aG docker $USER` # If you don't run this command, you need to change all `docker` commands to `sudo docker`
-# HOW TO RUN
-## Local
+## HOW TO RUN
+### Local
 * Install Requirements
     > ```
     > git clone https://github.com/suffolk066/yolov8-infer
@@ -24,7 +24,7 @@
     > cd .. # run code from yolov8-infer/
     > python3 src/app.py
     > ```
-## DOCKER
+### Docker
 * Create Docker Image
     > ```
     > git clone https://github.com/suffolk066/yolov8-infer
@@ -53,7 +53,7 @@
     > ```
     > MODEL_PATH = '../models/yolov8s.engine' # For example, to download YOLOv8-S:
     > ```
-## How to Test
+### How to Test
 * Find an image of your choice.
 * Update the IMAGE_PATH in the ./api_test.sh script.
 * Run the test script:
