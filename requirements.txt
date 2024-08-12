@@ -1,0 +1,5 @@
+Flask
+ultralytics
+onnxruntime-gpu
+dill
+numpy==1.23.5
