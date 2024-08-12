@@ -7,9 +7,9 @@ from flask import Flask, request, Response
 from ultralytics import YOLO
 
 # Constants and configurations
-MODEL_PATH = 'Put your model path'
+MODEL_PATH = '../models/yolov8n.engine'
 CONF_THRESHOLD = 0.5
-IMAGE_SAVE = False
+IMAGE_SAVE = True
 
 app = Flask(__name__)
 model = YOLO(MODEL_PATH, task='detect')
