@@ -12,27 +12,3 @@ curl -X POST $URL \
   -H "Content-Type: multipart/form-data"
 
 echo -e "\n"
-
-# Example
-# [
-#     {
-#         "class": "person",
-#         "confidence": 0.91,
-#         "bbox": [
-#             919,
-#             113,
-#             1253,
-#             990
-#         ]
-#     },
-#     {
-#         "class": "person",
-#         "confidence": 0.87,
-#         "bbox": [
-#             1215,
-#             254,
-#             1448,
-#             738
-#         ]
-#     }
-# ]
